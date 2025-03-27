@@ -100,11 +100,12 @@ public class PlayerControler : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Ground"))
+        if (other.gameObject.CompareTag("Windmisll")) // FIX IT TO Windmill
         {
             windmall.layer = LayerMask.NameToLayer("Default");
             AssignLevelValues();
             playerCollider.material.bounciness = GameManager.Singleton.playerBounce;
+            
         }
     }
 
